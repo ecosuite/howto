@@ -7,7 +7,7 @@
   * [How to burn SolarNodeOS to the Compulab IOT DIN IMX8PLUS IoT Edge Gateway](installation-and-upgrades/how-to-burn-solarnodeos-to-the-compulab-iot-din-imx8plus-iot-edge-gateway.md)
   * [How to request a new Location ID from SolarNetwork](installation-and-upgrades/how-to-request-a-new-location-id-from-solarnetwork.md)
   * [How to establish a connection on Kajeet VPN](installation-and-upgrades/how-to-establish-a-connection-on-kajeet-vpn.md)
-  * [Page 1](installation-and-upgrades/page-1.md)
+  * [HowTo Confirm your SolarEdge Setup is Valid](installation-and-upgrades/howto-confirm-your-solaredge-setup-is-valid.md)
 * [Data Anomalies](data-anomalies/README.md)
   * [How to fix a data spike due to a discontinuity](data-anomalies/how-to-fix-a-data-spike-due-to-a-discontinuity.md)
   * [How to update a Data Token's policy](data-anomalies/how-to-update-a-data-tokens-policy.md)
