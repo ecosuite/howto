@@ -1,6 +1,6 @@
 # HowTo Confirm your SolarEdge Setup is Valid
 
-**Version:** v2026.06.03
+**Version:** v2026.06.29
 
 ***
 
