@@ -32,7 +32,7 @@ And a sample table:
 
 ## Testing an image
 
-![Alt text describing the image](assets/images/luffy.jpg)
+![Alt text describing the image](../assets/images/luffy.jpg)
 
 ---
 
