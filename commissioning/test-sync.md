@@ -30,6 +30,10 @@ And a sample table:
 | Status | Testing |
 | Owner | Ecosuite |
 
+## Testing an image
+
+![Alt text describing the image](assets/images/wp13597697-monkey-luffy-desktop-wallpapers.jpg)
+
 ---
 
 *This file can be deleted once sync testing is complete.*
