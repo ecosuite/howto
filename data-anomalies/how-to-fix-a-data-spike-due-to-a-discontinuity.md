@@ -1,6 +1,6 @@
 # How to fix a data spike due to a discontinuity
 
-![](<../.gitbook/assets/0 (1).png>)
+![](../.gitbook/assets/0.png)
 
 HowTo fix a data spike due to a kWh meter discontinuity
 
