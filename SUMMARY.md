@@ -6,7 +6,6 @@
   * [How to SolarSSH to an Econode](installation-and-upgrades/how-to-solarssh-to-an-econode.md)
   * [How to burn SolarNodeOS to the Compulab IOT DIN IMX8PLUS IoT Edge Gateway](installation-and-upgrades/how-to-burn-solarnodeos-to-the-compulab-iot-din-imx8plus-iot-edge-gateway.md)
   * [How to request a new Location ID from SolarNetwork](installation-and-upgrades/how-to-request-a-new-location-id-from-solarnetwork.md)
-  * [How to establish a connection on Kajeet VPN](installation-and-upgrades/how-to-establish-a-connection-on-kajeet-vpn.md)
   * [HowTo Confirm your SolarEdge Setup is Valid](installation-and-upgrades/howto-confirm-your-solaredge-setup-is-valid.md)
 * [Data Anomalies](data-anomalies/README.md)
   * [How to fix a data spike due to a discontinuity](data-anomalies/how-to-fix-a-data-spike-due-to-a-discontinuity.md)
@@ -17,4 +16,3 @@
   * [How to manually trigger a camera snapshot](commissioning/how-to-manually-trigger-a-camera-snapshot.md)
   * [Checklist for SolarEdge Inverter setup](commissioning/checklist-for-solaredge-inverter-setup.md)
   * [Common Command Line commands for Edge Compute Node](commissioning/common-command-line-commands-for-edge-compute-node.md)
-  
