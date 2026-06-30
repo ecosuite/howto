@@ -17,3 +17,4 @@
   * [How to manually trigger a camera snapshot](commissioning/how-to-manually-trigger-a-camera-snapshot.md)
   * [Checklist for SolarEdge Inverter setup](commissioning/checklist-for-solaredge-inverter-setup.md)
   * [Common Command Line commands for Edge Compute Node](commissioning/common-command-line-commands-for-edge-compute-node.md)
+  * [This is Test.md](commissioning/test-sync.md)
