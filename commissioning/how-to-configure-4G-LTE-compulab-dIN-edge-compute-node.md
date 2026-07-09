@@ -2,9 +2,8 @@
 
 <div align="left"><figure><img src="../.gitbook/assets/ecosuite-logo-full.svg" alt="" width="288"><figcaption></figcaption></figure></div>
 
-## How to Configure a 4G LTE Compulab DIN Edge Compute Node
-
 _v2026.07.08_
+***
 
 ### Overview
 

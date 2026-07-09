@@ -1,8 +1,9 @@
-<div align="left"><figure><img src="../.gitbook/assets/ecosuite-logo-full.svg" alt="" width="288"><figcaption></figcaption></figure></div>
-
 # How To remotely change the CT Ratio on an AccuEnergy 1312 meter
 
+<div align="left"><figure><img src="../.gitbook/assets/ecosuite-logo-full.svg" alt="" width="288"><figcaption></figcaption></figure></div>
+
 v2026.07.08
+***
 
 ## Overview
 
