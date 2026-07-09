@@ -37,7 +37,7 @@ RequiredForOnline
 
 With a network cable attached to the **eth0** port to a router with a DHCP address, there are ways to find the dynamically allocated IP number from the laptop on the same subnet. The other option shown here is a USB-A to MicroUSB or USB-C to MicroUSB. Set your setup like below before starting the Step By Step.
 
-![](../.gitbook/assets/Topology_How_to_Configure_a_4G_LTE_Compulab_DIN_Edge_Compute_Node.md.jpg)
+![](../assets/how-to-configure-4G-LTE-compulab/Topology_How_to_Configure_a_4G_LTE_Compulab_DIN_Edge_Compute_Node.md.jpg)
 
 ### Step-by-Step process
 
@@ -402,6 +402,8 @@ timedatectl status
 ```
 
 And you should see the following:
+
+![](../assets/how-to-configure-4G-LTE-compulab/image1.jpg)
 
 ### Other commands
 
