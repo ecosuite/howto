@@ -16,3 +16,5 @@
   * [How to manually trigger a camera snapshot](commissioning/how-to-manually-trigger-a-camera-snapshot.md)
   * [Checklist for SolarEdge Inverter setup](commissioning/checklist-for-solaredge-inverter-setup.md)
   * [Common Command Line commands for Edge Compute Node](commissioning/common-command-line-commands-for-edge-compute-node.md)
+  * [How to Configure a 4G LTE Compulab DIN Edge Compute Node](commissioning/how-to-configure-4G-LTE-compulab-dIN-edge-compute-node.md)
+  * [HowTo remotely change the CT Ratio on an AccuEnergy 1312 meter](commissioning/how-to-remotely-change-the-CT-Ratio-on-an-AccuEnergy-1312-meter.md)
