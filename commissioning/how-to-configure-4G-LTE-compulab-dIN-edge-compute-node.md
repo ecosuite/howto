@@ -1,47 +1,48 @@
-<div align="left"><figure><img src="../.gitbook/assets/ecosuite-logo-full.svg" alt="" width="288"><figcaption></figcaption></figure></div>
-
 # How to Configure a 4G LTE Compulab DIN Edge Compute Node
 
+<div align="left"><figure><img src="../.gitbook/assets/ecosuite-logo-full.svg" alt="" width="288"><figcaption></figcaption></figure></div>
+
+## How to Configure a 4G LTE Compulab DIN Edge Compute Node
 
 _v2026.07.08_
 
-## Overview
+### Overview
 
 This document shows you how to take a Compulab DIN and turn it into an Ecosuite Edge Compute Node (ECN).
 
-## Relevant Roles for this document
+### Relevant Roles for this document
 
-- Asset Manager
-- Database Administrator
-- Contract Manufacturer
+* Asset Manager
+* Database Administrator
+* Contract Manufacturer
 
-## Tools Needed
+### Tools Needed
 
-- Linux or MacOS laptop with SolarSSH setup and Chrome or Firefox browser, and a commandline text editor like vi or nano
-- A USB-A to MicroUSB or USB-C to MicroUSB cable
-- Credentials to the node to upgrade
-- Access to Kajeet portal and Kajeet VPN
-- A Compulab DIN unit with SolarNodeOS the right 4G antenna installed and a clear access to 4G signals
-- A 12VDC to 24VDC power supply
-- A small flathead screwdriver
-- A registered Kajeet SIM card inserted properly into the Compulab unit
-- A DHCP router
+* Linux or MacOS laptop with SolarSSH setup and Chrome or Firefox browser, and a commandline text editor like vi or nano
+* A USB-A to MicroUSB or USB-C to MicroUSB cable
+* Credentials to the node to upgrade
+* Access to Kajeet portal and Kajeet VPN
+* A Compulab DIN unit with SolarNodeOS the right 4G antenna installed and a clear access to 4G signals
+* A 12VDC to 24VDC power supply
+* A small flathead screwdriver
+* A registered Kajeet SIM card inserted properly into the Compulab unit
+* A DHCP router
 
-## Context
+### Context
 
-When configuring a Compulab DIN device, you are starting with an ECN that already has SolarNodeOS installed on the unit (see: [*HowTo burn SolarNodeOS to the Compulab IOT-DIN-IMX8PLUS IoT Edge Gateway*](https://docs.google.com/document/d/1FLT-bLXLcKXO9Sp8CUUfu1s_9msTzSqRKaJjUqPxf_o/edit?usp=sharing))
+When configuring a Compulab DIN device, you are starting with an ECN that already has SolarNodeOS installed on the unit (see: [_HowTo burn SolarNodeOS to the Compulab IOT-DIN-IMX8PLUS IoT Edge Gateway_](https://docs.google.com/document/d/1FLT-bLXLcKXO9Sp8CUUfu1s_9msTzSqRKaJjUqPxf_o/edit?usp=sharing))
 
 RequiredForOnline
 
-## Topology
+### Topology
 
 With a network cable attached to the **eth0** port to a router with a DHCP address, there are ways to find the dynamically allocated IP number from the laptop on the same subnet. The other option shown here is a USB-A to MicroUSB or USB-C to MicroUSB. Set your setup like below before starting the Step By Step.
 
-![](../assets/images/Topology_How_to_Configure_a_4G_LTE_Compulab_DIN_Edge_Compute_Node.md.jpg)
+![](../.gitbook/assets/Topology_How_to_Configure_a_4G_LTE_Compulab_DIN_Edge_Compute_Node.md.jpg)
 
-## Step-by-Step process
+### Step-by-Step process
 
-### Step 1: Setup a connection to the terminal interface of the SolarNode
+#### Step 1: Setup a connection to the terminal interface of the SolarNode
 
 Open up a Terminal app and type the following to get a view of the terminal:
 
@@ -55,14 +56,13 @@ Again you need to know the device that represents your USB-A to MicroUSB cable, 
 ls -l /dev/tty*
 ```
 
-### Step 2: Login to the SolarNode
+#### Step 2: Login to the SolarNode
 
 You should be able to get a terminal and you can log into the node with the credentials:
 
-**User:** solar
-**Password:** solar
+**User:** solar **Password:** solar
 
-### Step 3: Connect the SolarNode's eth0 port to an ethernet router and update the software
+#### Step 3: Connect the SolarNode's eth0 port to an ethernet router and update the software
 
 Note: because this update process may take time to download and install OS updates it is worth using the DHCP ethernet interface with a broadband router, rather than getting the 4G connection working and using 4G bandwidth which is generally slower and more expensive. However, you could update the OS later once you have a 4G connection, but beware that the size of the updates may be prohibitive for your 4G plan.
 
@@ -100,7 +100,7 @@ sudo reboot
 
 And SolarSSH back into the terminal for the SolarNode to resume the setup process.
 
-### Step 4: Change the OS password for this unit and document that in the appropriate credentials system
+#### Step 4: Change the OS password for this unit and document that in the appropriate credentials system
 
 ```
 passwd
@@ -123,13 +123,13 @@ Make sure you have recorded the value somewhere secure, there is no way to recov
 sudo reboot
 ```
 
-### Step 5: Install the package for the Quectel EC25 internal 4G board
+#### Step 5: Install the package for the Quectel EC25 internal 4G board
 
 ```
 sudo apt install sn-pi-mobile-shield-usb
 ```
 
-### Step 6: Use the APN value appropriate for your SIM card
+#### Step 6: Use the APN value appropriate for your SIM card
 
 Create a new apn file. Create a symlink to that new apn file. Then edit the contents so that they correspond to the APN value given out by your carrier.
 
@@ -144,15 +144,15 @@ sudo nano apn.internet
 
 The following values are the one we use generally based on providers:
 
-| SIM Provider | Carrier | Value |
-|---|---|---|
-| **Kajeet** | Verizon | Kajeet.gw12.vzwentp |
-| **Kajeet** | AT&T | sentinelent01.com.attz |
-| **Hologram** | Hologram | hologram |
-| **Verizon** | Generic Verizon | vzwinternet |
-| **T-Mobile** | T-Mobile | fast.t-mobile.com |
-| **2Degrees** | 2Degrees | internet |
-| **Spark NZ** | Spark NZ | internet |
+| SIM Provider | Carrier         | Value                  |
+| ------------ | --------------- | ---------------------- |
+| **Kajeet**   | Verizon         | Kajeet.gw12.vzwentp    |
+| **Kajeet**   | AT\&T           | sentinelent01.com.attz |
+| **Hologram** | Hologram        | hologram               |
+| **Verizon**  | Generic Verizon | vzwinternet            |
+| **T-Mobile** | T-Mobile        | fast.t-mobile.com      |
+| **2Degrees** | 2Degrees        | internet               |
+| **Spark NZ** | Spark NZ        | internet               |
 
 Because we chose Kajeet-Verizon in this case we edited the file to look like this for example when you are using Kajeet Verizon.
 
@@ -182,11 +182,11 @@ sudo cp /etc/ppp/options /etc/ppp/options.local
 sudo ln -sf options.local /etc/ppp/options
 ```
 
-### Step 7: Associate the node to SolarNet
+#### Step 7: Associate the node to SolarNet
 
 This is a standard process outlined in another HowTo document. Once you have a node id, you should be ready to test SolarSSH to that unit, connected to the internet only from 4G.
 
-### Step 8: Power Down, disconnect all network and USB cables from the unit locally, power cycle
+#### Step 8: Power Down, disconnect all network and USB cables from the unit locally, power cycle
 
 Reboot the node with the command:
 
@@ -198,7 +198,7 @@ then remove the ethernet cable from the RJ45 port of the Compulab, and remove th
 
 See: [How to SolarSSH to a SolarNode](https://docs.google.com/document/d/1ybj5HESuCLQo0oOsBANxXMtTESELXe_X7qhYH4EHEdA/edit?usp=sharing)
 
-### Additional settings for default behavior
+#### Additional settings for default behavior
 
 **Note:** The 4G connection to the internet is established at a point sometime after booting the OS, and is generally very persistent. That means that when the 4G connection drops for whatever reason - perhaps there is a storm in the area where the node is deployed, and the infrastructure for that wireless carrier or their affiliates loses power or signal strength - the SolarNode will try to reconnect.
 
@@ -246,13 +246,13 @@ Older - not used:
 sudo systemctl start sn-mobile-shield-quectel-reconnect.timer
 ```
 
-### To check status of the sn-mobile-shield-usb-reconnect.timer service you can type
+#### To check status of the sn-mobile-shield-usb-reconnect.timer service you can type
 
 ```
 sudo systemctl status sn-mobile-shield-usb-reconnect.timer
 ```
 
-## Setting up WiFi
+### Setting up WiFi
 
 ```
 sudo dpkg-reconfigure sn-wifi
@@ -262,20 +262,20 @@ sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
 sudo systemctl restart systemd-networkd
 ```
 
-## Setting up DHCP
+### Setting up DHCP
 
 Setting up one or both of the two ethernet ports on the EG500 as a DHCP server, issuing ports with a range of a subnet specified, where you can map assigned IP addresses to MAC addresses is very possible. The two RJ45 ports on the EG500 are identified as follows:
 
-| Ethernet Port Label | Device name | Notes |
-|---|---|---|
-| WAN | eth0 | LEDs will light up on this RJ45 port when active |
-| LAN | eth1 | LEDs will light up on this RJ45 port when active |
+| Ethernet Port Label | Device name | Notes                                            |
+| ------------------- | ----------- | ------------------------------------------------ |
+| WAN                 | eth0        | LEDs will light up on this RJ45 port when active |
+| LAN                 | eth1        | LEDs will light up on this RJ45 port when active |
 
 Equally each port or both ports can be configured as DHCP clients to another DHCP server - this is generally the default of most embedded ethernet clients.
 
 Equally each port or both ports can be configured to have static IPs on specific subnets.
 
-### Step 1: Edit the systemd-networkd configuration for the port
+#### Step 1: Edit the systemd-networkd configuration for the port
 
 With a text editor open the configuration for the LAN device or eth1:
 
@@ -334,7 +334,7 @@ RequiredForOnline=false
 
 And save the file. Note that the MAC address specified for the device you want to assign the IP number 192.168.6.109 should match that of the device.
 
-### Step 2: Restart systemd-networkd
+#### Step 2: Restart systemd-networkd
 
 Type the command:
 
@@ -342,7 +342,7 @@ Type the command:
 sudo systemctl restart systemd-networkd
 ```
 
-### Step 3: edit your nftables configuration to allow for port forwarding
+#### Step 3: edit your nftables configuration to allow for port forwarding
 
 Edit your node's nftables configuration using this command
 
@@ -363,11 +363,11 @@ To restart nftables:
 sudo systemctl restart nftables
 ```
 
-### Step 4: Re-plugin the ethernet device you want to set as a client
+#### Step 4: Re-plugin the ethernet device you want to set as a client
 
 You should see LEDs on the RJ45 port of the cable connected to the DHCP client device at least - this shows that the port is now active. Remember with eth1 (labeled LAN) you will not see LEDs on the RJ45 port on the EG500, where with eth0 (labeled WAN) you should see LEDs lit up on the RJ45 port on the EG500 side as well.
 
-### Step 5: Test to see that you can see this device as 192.168.6.109
+#### Step 5: Test to see that you can see this device as 192.168.6.109
 
 While the package nmap will not be installed by default on your node, you can install it with:
 
@@ -404,9 +404,7 @@ timedatectl status
 
 And you should see the following:
 
-![](images/image1.jpg)
-
-## Other commands
+### Other commands
 
 ```
 sudo nano /etc/ppp/chatscripts/chat-connect
@@ -442,7 +440,7 @@ OK ATD*99#
 CONNECT
 ```
 
-## Setting up a USB ethernet adapter
+### Setting up a USB ethernet adapter
 
 ```
 sudo nano /etc/systemd/network/12-usb.network
