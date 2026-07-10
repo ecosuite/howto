@@ -3,6 +3,7 @@
 <div align="left"><figure><img src="../.gitbook/assets/ecosuite-logo-full.svg" alt="" width="288"><figcaption></figcaption></figure></div>
 
 _v2026.07.08_
+
 ***
 
 ### Overview
@@ -37,7 +38,7 @@ RequiredForOnline
 
 With a network cable attached to the **eth0** port to a router with a DHCP address, there are ways to find the dynamically allocated IP number from the laptop on the same subnet. The other option shown here is a USB-A to MicroUSB or USB-C to MicroUSB. Set your setup like below before starting the Step By Step.
 
-![](../assets/how-to-configure-4G-LTE-compulab/Topology_How_to_Configure_a_4G_LTE_Compulab_DIN_Edge_Compute_Node.md.jpg)
+![](<../.gitbook/assets/Topology_How_to_Configure_a_4G_LTE_Compulab_DIN_Edge_Compute_Node.md (1).jpg>)
 
 ### Step-by-Step process
 
@@ -387,13 +388,13 @@ $ sudo nmap -sn 192.168.6.0/24
 Starting Nmap 7.93 ( https://nmap.org ) at 2025-01-31 21:07 EST
 Nmap scan report for 192.168.6.109
 Host is up (0.000098s latency).
-MAC Address: E4:5F:01:22:04:0E (Raspberry Pi Trading)
+MAC Address: E4:44:01:22:99:0E (Raspberry Pi Trading)
 Nmap scan report for solarnode (192.168.6.1)
 Host is up.
 Nmap done: 256 IP addresses (2 hosts up) scanned in 4.36 seconds
 ```
 
-Note here that the DHCP client that connected was another Raspberry Pi SolarNode (see the Raspberry Pi Trading marker) and it was assigned 192.168.6.109 as an IP number, from this DHCP server running on our EG500 following the MAC address specification.
+Note here that the DHCP client that connected was another Raspberry Pi SolarNode (see the Raspberry Pi Trading marker) and it was assigned 192.168.6.109 as an IP number, from this DHCP server running on our Compulab following the MAC address specification.
 
 You can check the NTP time sync status using the following command at a terminal:
 
@@ -403,7 +404,7 @@ timedatectl status
 
 And you should see the following:
 
-![](../assets/how-to-configure-4G-LTE-compulab/image1.jpg)
+![](../.gitbook/assets/image1.jpg)
 
 ### Other commands
 
